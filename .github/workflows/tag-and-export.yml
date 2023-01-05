@@ -16,8 +16,7 @@ jobs:
         BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
 
       steps:
-        - run: |
-        echo The PR was merged
+        - run: echo The PR was merged
         - uses: actions/checkout@v2
         - name: Use Node.js 12
           uses: actions/setup-node@v1
