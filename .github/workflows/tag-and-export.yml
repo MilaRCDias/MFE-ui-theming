@@ -2,19 +2,20 @@
 name: Tag and Export Components
 
 on:
-  push:
-    branches: [main]
   pull_request:
-    branches: [main]
+    types:
+      - closed
 
 jobs:
+
   tag-and-export:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '--skip-ci')"
     env:
       BIT_TOKEN: ${{ secrets.BIT_TOKEN }}
 
     steps:
+      - run: echo The PR was merged
       - uses: actions/checkout@v2
       - name: Use Node.js 12
         uses: actions/setup-node@v1
