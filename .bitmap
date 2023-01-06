@@ -10,8 +10,8 @@
 
 {
     "apps/to-do": {
-        "scope": "",
-        "version": "",
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.1",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
         "rootDir": "ui-scope/apps/to-do",
@@ -27,6 +27,12 @@
                 "env": "teambit.react/react"
             }
         }
+    },
+    "button": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/button"
     },
     "$schema-version": "15.0.0"
 }

@@ -53,7 +53,8 @@
         "react": "17.0.2",
         "react-dom": "17.0.2"
       }
-    }
+    },
+    "linkCoreAspects": true
   },
   /**
    * workspace variants allow to set different subsets of configuration for components in your
