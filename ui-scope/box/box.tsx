@@ -1,18 +1,16 @@
 import React, { ReactNode } from 'react';
 
-export type DividerProps = {
+export type BoxProps = {
   /**
    * a node to be rendered in the special component.
    */
   children?: ReactNode;
 };
 
-export function Divider({ children }: DividerProps) {
+export function Box({ children }: BoxProps) {
   return (
     <div>
-      <span>
       {children}
-      </span>
     </div>
   );
 }
