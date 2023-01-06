@@ -49,9 +49,9 @@
     "checkbox": {
         "scope": "",
         "version": "",
-        "defaultScope": "medlify.core-component-library",
+        "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "core-component-library/checkbox",
+        "rootDir": "ui-scope/checkbox",
         "nextVersion": {
             "version": "patch",
             "message": "",
