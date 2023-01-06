@@ -11,71 +11,35 @@
 {
     "apps/to-do": {
         "scope": "milavrt.ui-scope",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/apps/to-do",
-        "nextVersion": {
-            "version": "patch",
-            "message": "",
-            "username": "milavrt",
-            "email": "MilaRCDias@users.noreply.github.com"
-        },
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "ui-scope/apps/to-do"
     },
     "button": {
         "scope": "milavrt.ui-scope",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/button"
+    },
+    "checkbox": {
+        "scope": "milavrt.ui-scope",
         "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/button",
-        "nextVersion": {
-            "version": "patch",
-            "message": "",
-            "username": "milavrt",
-            "email": "MilaRCDias@users.noreply.github.com"
-        },
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "ui-scope/checkbox"
     },
     "header": {
         "scope": "milavrt.ui-scope",
         "version": "0.0.5",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/header",
-        "nextVersion": {
-            "version": "patch",
-            "message": "",
-            "username": "milavrt",
-            "email": "MilaRCDias@users.noreply.github.com"
-        }
+        "rootDir": "ui-scope/header"
     },
     "radio": {
         "scope": "milavrt.ui-scope",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/radio",
-        "nextVersion": {
-            "version": "patch",
-            "message": "",
-            "username": "milavrt",
-            "email": "MilaRCDias@users.noreply.github.com"
-        },
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "ui-scope/radio"
     },
     "$schema-version": "15.0.0"
 }
