@@ -6,3 +6,4 @@ bit install
 bit build
 bit test
 bit tag --soft
+git add .bitmap

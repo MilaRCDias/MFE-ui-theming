@@ -15,6 +15,12 @@
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
         "rootDir": "ui-scope/apps/to-do",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        },
         "config": {
             "teambit.react/react": {},
             "teambit.envs/envs": {
