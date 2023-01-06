@@ -46,6 +46,25 @@
             }
         }
     },
+    "checkbox": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "medlify.core-component-library",
+        "mainFile": "index.ts",
+        "rootDir": "core-component-library/checkbox",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        },
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "header": {
         "scope": "milavrt.ui-scope",
         "version": "0.0.4",
