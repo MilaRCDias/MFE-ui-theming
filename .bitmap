@@ -46,12 +46,12 @@
             }
         }
     },
-    "radio": {
+    "header": {
         "scope": "",
         "version": "",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/radio",
+        "rootDir": "ui-scope/header",
         "nextVersion": {
             "version": "patch",
             "message": "",
@@ -64,6 +64,12 @@
                 "env": "teambit.react/react"
             }
         }
+    },
+    "radio": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/radio"
     },
     "$schema-version": "15.0.0"
 }
