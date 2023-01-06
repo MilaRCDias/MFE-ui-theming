@@ -46,9 +46,15 @@
             }
         }
     },
+    "header": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.4",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/header"
+    },
     "radio": {
-        "scope": "",
-        "version": "",
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.1",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
         "rootDir": "ui-scope/radio",
