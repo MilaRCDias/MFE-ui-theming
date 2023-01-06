@@ -3,8 +3,7 @@ name: Check remote scopes
 
 on:
   pull_request:
-    types:
-      - opened
+      types: [opened, edited, reopened]
 
 jobs:
 

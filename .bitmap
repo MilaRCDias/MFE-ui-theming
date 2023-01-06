@@ -28,6 +28,25 @@
         "mainFile": "index.ts",
         "rootDir": "ui-scope/checkbox"
     },
+    "divider": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "milavrt.ui-scope",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/divider",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        },
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "header": {
         "scope": "milavrt.ui-scope",
         "version": "0.0.5",
@@ -39,7 +58,13 @@
         "version": "0.0.2",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/radio"
+        "rootDir": "ui-scope/radio",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        }
     },
     "$schema-version": "15.0.0"
 }
