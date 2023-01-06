@@ -1,16 +1,16 @@
 import React, { ReactNode } from 'react';
 
-export type RadioProps = {
+export type DividerProps = {
   /**
    * a node to be rendered in the special component.
    */
   children?: ReactNode;
 };
 
-export function Radio({ children }: RadioProps) {
+export function Divider({ children }: DividerProps) {
   return (
-    <span>
+    <div>
       {children}
-    </span>
+    </div>
   );
 }
