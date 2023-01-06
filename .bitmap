@@ -50,7 +50,13 @@
         "scope": "milavrt.ui-scope",
         "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/header"
+        "rootDir": "ui-scope/header",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        }
     },
     "radio": {
         "scope": "milavrt.ui-scope",
