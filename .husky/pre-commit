@@ -3,6 +3,7 @@
 
 
 bit install
+bit compile
 bit build
 bit test
 bit tag --soft
