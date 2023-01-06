@@ -10,7 +10,9 @@ export type DividerProps = {
 export function Divider({ children }: DividerProps) {
   return (
     <div>
+      <span>
       {children}
+      </span>
     </div>
   );
 }

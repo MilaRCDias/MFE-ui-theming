@@ -55,7 +55,7 @@
     },
     "radio": {
         "scope": "milavrt.ui-scope",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
         "rootDir": "ui-scope/radio",
