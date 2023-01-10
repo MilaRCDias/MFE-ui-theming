@@ -10,16 +10,35 @@
 
 {
     "apps/to-do": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.2",
+        "defaultScope": "milavrt.ui-scope",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/apps/to-do"
+    },
+    "button": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.2",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/button"
+    },
+    "checkbox": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/checkbox"
+    },
+    "divider": {
         "scope": "",
         "version": "",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/apps/to-do",
+        "rootDir": "ui-scope/divider",
         "nextVersion": {
             "version": "patch",
             "message": "",
             "username": "milavrt",
-            "email": "milarabello.dias@gmail.com"
+            "email": "MilaRCDias@users.noreply.github.com"
         },
         "config": {
             "teambit.react/react": {},
@@ -28,23 +47,23 @@
             }
         }
     },
-    "button": {
-        "scope": "",
-        "version": "",
+    "header": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.5",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/header"
+    },
+    "radio": {
+        "scope": "milavrt.ui-scope",
+        "version": "0.0.3",
         "defaultScope": "milavrt.ui-scope",
         "mainFile": "index.ts",
-        "rootDir": "ui-scope/button",
+        "rootDir": "ui-scope/radio",
         "nextVersion": {
             "version": "patch",
             "message": "",
             "username": "milavrt",
-            "email": "milarabello.dias@gmail.com"
-        },
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
+            "email": "MilaRCDias@users.noreply.github.com"
         }
     },
     "$schema-version": "15.0.0"

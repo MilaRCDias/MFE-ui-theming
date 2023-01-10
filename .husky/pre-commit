@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+bit install
+bit compile
+bit test
+bit build
+bit tag --soft
+git add .bitmap
