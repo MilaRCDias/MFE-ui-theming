@@ -16,6 +16,24 @@
         "mainFile": "index.ts",
         "rootDir": "ui-scope/apps/to-do"
     },
+    "box": {
+        "scope": "",
+        "version": "",
+        "mainFile": "index.ts",
+        "rootDir": "ui-scope/box",
+        "nextVersion": {
+            "version": "patch",
+            "message": "",
+            "username": "milavrt",
+            "email": "MilaRCDias@users.noreply.github.com"
+        },
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "button": {
         "scope": "milavrt.ui-scope",
         "version": "0.0.2",
