@@ -44,7 +44,7 @@ jobs:
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
-        if: always()
+        if: failure()
         with:
           channel-id: 'C04J76273MZ'
           payload: |
@@ -70,13 +70,14 @@ jobs:
                 },
                 {
                 "type": "context",
-                "elements": [
+                "elements": 
+                [
                   {
                     "type": "mrkdwn",
                     "text": "${{ github.event.pull_request.html_url}}/n`${{github.event.head_commit.url}}`"
                   }
                 ]
-              },
+                }
               ]
             }
         env:
