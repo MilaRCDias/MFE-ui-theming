@@ -53,7 +53,7 @@ jobs:
               "type": "home",
               "blocks": [
                 {
-                  "type": "text",
+                  "type": "section",
                   "text": {
                     "type": "plain_text",
                     "text": "GitHub Action build"
@@ -75,7 +75,7 @@ jobs:
                 [
                   {
                     "type": "mrkdwn",
-                    "text": "${{ github.event.pull_request.html_url}}/n`${{github.event.head_commit.url}}`"
+                    "text": "<${{ github.event.pull_request.html_url}}|See the pull request *here*>\n commit SHA:`${{github.event.head_commit.url}}`"
                   }
                 ]
                 }
