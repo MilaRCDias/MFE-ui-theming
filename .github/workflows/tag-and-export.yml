@@ -49,13 +49,23 @@ jobs:
           channel-id: 'C04J76273MZ'
           payload: |
             {
-              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+              "type": "home",
               "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "GitHub Action build result"
+                  }
+                },
+                {
+                  "type": "divider"
+                },
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "text": "\n> Status: *bold*${{ job.status }}*bold*❌\n>${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
                   }
                 }
               ]
