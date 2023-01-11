@@ -52,7 +52,16 @@ jobs:
               "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}",
               "type": "home",
               "blocks": 
-              [
+                [ {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "GitHub Workflow Action: *Export Components*"
+                    }
+                  },
+                  {
+                    "type": "divider"
+                  },
                   {
                     "type": "section",
                     "fields": [
@@ -77,7 +86,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Commit SHA*\n`${{github.event.head_commit.url}}\n 2:${{github.event.pull_request_head.sha}}\n 3:${{ github.sha }}`"
+                      "text": "*Commit SHA*\n`${{ github.sha }}`"
                     }
                   }
               ]
