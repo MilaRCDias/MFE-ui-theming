@@ -52,35 +52,35 @@ jobs:
               "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}",
               "type": "home",
               "blocks": 
-                    [
-                        {
-                          "type": "section",
-                          "fields": [
-                            {
-                              "type": "mrkdwn",
-                              "text": "\n*Status*\n❌ *${{ job.status }}\n *Pull request number*\n${{ github.event.pull_request.number }}"
-                            },
-                            {
-                              "type": "mrkdwn",
-                              "text": "*Author*\n${{ github.event.pull_request.user.login }}\n *Compare branch*\n${{ github.event.pull_request.head.ref }}"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "section",
-                          "text": {
-                            "type": "mrkdwn",
-                            "text": "*Pull request*\n${{ github.event.pull_request.html_url }}"
-                          }
-                        },
-                        {
-                          "type": "section",
-                          "text": {
-                            "type": "mrkdwn",
-                            "text": "*Commit SHA*\n`${{github.event.head_commit.url}}`"
-                          }
-                        }
+              [
+                  {
+                    "type": "section",
+                    "fields": [
+                      {
+                        "type": "mrkdwn",
+                        "text": "\n*Status*\n❌ ${{ job.status }}\n *Pull request number*\n${{ github.event.pull_request.number }}"
+                      },
+                      {
+                        "type": "mrkdwn",
+                        "text": "*Author*\n${{ github.event.pull_request.user.login }}\n *Compare branch*\n${{ github.event.pull_request.head.ref }}"
+                      }
                     ]
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Pull request*\n${{ github.event.pull_request.html_url }}"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*Commit SHA*\n`${{github.event.head_commit.url}}\n 2:${{github.event.pull_request_head.sha}}\n 3:${{ github.sha }}`"
+                    }
+                  }
+              ]
             }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}   
