@@ -48,7 +48,8 @@ jobs:
         with:
           channel-id: 'C04J76273MZ'
           payload: |
-            { "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}"
+            { 
+              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}",
               "type": "home",
               "blocks": [
                 {
