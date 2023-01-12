@@ -31,22 +31,14 @@ jobs:
           bit config set user.token $BIT_TOKEN
       - name: Install packages using bit
         run: bit install
-      - name: Soft Tag if not
-        run: |
-          sudo apt-get install -y jq
-          sh ./.github/soft-tag.sh 
-      - name: Hard-tag pending components
-        run: bit tag --persist
-      - name: Export components
-        run: bit export
-      - name: Commit changes made to .bitmap
-        run: sh ./.github/commit-bitmap.sh
+      
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
-        if: failure()
+        if: always()
         with:
           channel-id: 'C04J76273MZ'
+          # copy only json
           payload: |
             { 
               "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}",
