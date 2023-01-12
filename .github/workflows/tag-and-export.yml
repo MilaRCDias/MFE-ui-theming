@@ -18,20 +18,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Install Bit Version Manager
-        run: npm i -g @teambit/bvm
-      - name: Install latest Bit version
-        run: bvm install
-      - name: add bvm bin folder to path
-        run: echo "$HOME/bin" >> $GITHUB_PATH
-      - name: Set up bit config
-        run: |
-          bit config set analytics_reporting false
-          bit config set anonymous_reporting false
-          bit config set user.token $BIT_TOKEN
-      - name: Install packages using bit
-        run: bit install
-      
+    
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
@@ -41,14 +28,14 @@ jobs:
           # copy only json
           payload: |
             { 
-              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n ${{ github.event.pull_request.html_url}}",
+              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n <${{github.event.compare}}|Compare changes here>",
               "type": "home",
               "blocks": 
                 [ {
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "GitHub Workflow Action: *Export Components*"
+                      "text": "GitHub Workflow Action: *${{ github.workflow }}*"
                     }
                   },
                   {
@@ -59,11 +46,11 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "\n*Status*\n❌ ${{ job.status }}\n *Pull request number*\n${{ github.event.push.number }}"
+                        "text": "\n*Status*\n❌ ${{ job.status }}\n &nbsp; *Workflow run number*\n${{ github.run_number }}"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Author*\n${{ github.actor }}\n *Compare branch*\n${{ github.ref_name }}"
+                        "text": "*Pull request Author*\n ${{ github.actor }}\n &nbsp; *Workflow run Author*\n${{ github.triggering_actor }}"
                       }
                     ]
                   },
@@ -71,7 +58,14 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Pull request*\n${{toJSON(github)}}"
+                      "text": "*Pull request message*\n${{github.event.head_commit.message}}"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "<${{github.event.compare}}|Compare changes here>"
                     }
                   },
                   {
