@@ -39,18 +39,15 @@ jobs:
                     }
                   },
                   {
-                    "type": "divider"
-                  },
-                  {
                     "type": "section",
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "\n*Status*\n❌ ${{ job.status }}\n &nbsp; *Workflow run number*\n${{ github.run_number }}"
+                        "text": "\n*Status*\n❌ ${{ job.status }}\n *Workflow run number*\n${{ github.run_number }}"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Pull request Author*\n ${{ github.actor }}\n &nbsp; *Workflow run Author*\n${{ github.triggering_actor }}"
+                        "text": "*Pull request Author*\n ${{ github.actor }}\n *Workflow run Author*\n${{ github.triggering_actor }}"
                       }
                     ]
                   },
@@ -74,8 +71,11 @@ jobs:
                       "type": "mrkdwn",
                       "text": "*Commit SHA*\n`${{ github.sha }}`"
                     }
-                  }
-              ]
+                  }, 
+                  {
+                    "type": "divider"
+                  },
+                ]
             }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}   
