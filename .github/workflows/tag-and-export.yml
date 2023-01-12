@@ -28,7 +28,7 @@ jobs:
           # copy only json
           payload: |
             { 
-              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n <${{github.event.compare}}|Compare changes here>",
+              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n Compare changes here:${{github.event.compare}}",
               "type": "home",
               "blocks": 
                 [ {
