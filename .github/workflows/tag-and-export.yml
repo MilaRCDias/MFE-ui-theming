@@ -27,11 +27,11 @@ jobs:
           channel-id: 'C04J76273MZ'
           # copy only json
           payload: |
-            { 
-              "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n Compare changes here:${{github.event.compare}}",
-              "type": "home",
-              "blocks": 
-                [ {
+            {
+                "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n Compare changes here:${{github.event.compare}}",
+                "type": "home",
+                "blocks": [
+                  {
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
@@ -62,20 +62,20 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "<${{github.event.compare}}|Compare changes here>"
+                      "text": "*Commit SHA*\n`${{ github.sha }}`"
                     }
                   },
                   {
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "*Commit SHA*\n`${{ github.sha }}`"
+                      "text": "Compare changes\n${{github.event.compare}}"
                     }
-                  }, 
+                  },
                   {
                     "type": "divider"
                   }
                 ]
-            }
+              }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}   
