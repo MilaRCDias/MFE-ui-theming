@@ -65,13 +65,7 @@ jobs:
                       "text": "*Commit SHA*\n`${{ github.sha }}`"
                     }
                   },
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "Compare changes\n${{github.event.compare}}"
-                    }
-                  }
+                  
                 ]
               }
         env:
