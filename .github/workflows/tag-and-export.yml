@@ -30,7 +30,8 @@ jobs:
             {
                 "text": "Github Action build \n>Status\n>❌ *${{ job.status }}*\n Compare changes here:${{github.event.compare}}",
                 "type": "home",
-                "blocks": [
+                "blocks": 
+                [
                   {
                     "type": "section",
                     "text": {
@@ -65,8 +66,14 @@ jobs:
                       "text": "*Commit SHA*\n`${{ github.sha }}`"
                     }
                   },
-                  
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "Compare changes\n${{github.event.compare}}"
+                    }
+                  }
                 ]
-              }
+            }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}   
